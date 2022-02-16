@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiFinance.Web</name>
+    </assembly>
+    <members>
+        <member name="T:ApiFinance.Web.Controllers.BudgetRegisterController">
+            <summary>
+            Controler BudgetRegister
+            </summary>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetAll">
+             <summary>
+             Retorna todos os registros cadastrados
+             </summary>
+             <remarks>
+             Exemplo do objeto retornado:
+            
+            {
+                "exception": null,
+                "message": null,
+                "result": "OK",
+                "resultObject": [
+                    {
+                        "categoryId": 1,
+                        "categoryName": "string",
+                        "dtRegister": "2022-01-22T15:43:29",
+                        "description": "string",
+                        "dtDue": "2022-03-20T00:00:00",
+                        "note": "string",
+                        "paymentAccountId": 0,
+                        "paymentStatus": 1,
+                        "subCategoryId": 1,
+                        "subCategoryName": "string",
+                        "typeId": 1,
+                        "typeName": "string",
+                        "value": 0,
+                        "id": 1
+                    }
+                ],
+                "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetById(System.Int32)">
+             <summary>
+             Consulta um registro pelo ID
+             </summary>
+             <param name="id">ID do registro</param>
+             <remarks>
+             Exemplo do objeto retornado:
+            
+            {
+                "exception": null,
+                "message": null,
+                "result": "OK",
+                "resultObject": [
+                    {
+                        "categoryId": 1,
+                        "categoryName": "string",
+                        "dtRegister": "2022-01-22T15:43:29",
+                        "description": "string",
+                        "dtDue": "2022-03-20T00:00:00",
+                        "note": "string",
+                        "paymentAccountId": 0,
+                        "paymentStatus": 1,
+                        "subCategoryId": 1,
+                        "subCategoryName": "string",
+                        "typeId": 1,
+                        "typeName": "string",
+                        "value": 0,
+                        "id": 1
+                    }
+                ],
+                "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetByMonthYear(System.String,System.String,System.Int32)">
+             <summary>
+             Retorna os registros por Mês e por tipo de Movimento
+             </summary>
+             <param name="year">Ano de registro</param>
+             <param name="month">Mê de registro</param>
+             <param name="movementId">Código do tipo de Movimento Ex:(1-Despesa / 2-Receita / 3-Transfência entre contas)  
+             </param>
+             <remarks>
+             Exemplo do objeto retornado:
+            
+            {
+                "exception": null,
+                "message": null,
+                "result": "OK",
+                "resultObject": [
+                    {
+                        "categoryId": 1,
+                        "categoryName": "string",
+                        "dtRegister": "2022-01-22T15:43:29",
+                        "description": "string",
+                        "dtDue": "2022-03-20T00:00:00",
+                        "note": "string",
+                        "paymentAccountId": 0,
+                        "paymentStatus": 1,
+                        "subCategoryId": 1,
+                        "subCategoryName": "string",
+                        "typeId": 1,
+                        "typeName": "string",
+                        "value": 0,
+                        "id": 1
+                    }
+                ],
+                "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetByMovementId(System.Int32)">
+             <summary>
+             Retorna todos os regitros de um tipo de movimento
+             </summary>
+             <param name="movementId">Código do tipo de Movimento
+              Exemplo:
+                 1 - Despesa
+                 2 - Receita
+                 3 - Transfência entre contas
+             </param>
+             <remarks>
+             Exemplo do objeto retornado:
+            
+            {
+                "exception": null,
+                "message": null,
+                "result": "OK",
+                "resultObject": [
+                    {
+                        "categoryId": 1,
+                        "categoryName": "string",
+                        "dtRegister": "2022-01-22T15:43:29",
+                        "description": "string",
+                        "dtDue": "2022-03-20T00:00:00",
+                        "note": "string",
+                        "paymentAccountId": 0,
+                        "paymentStatus": 1,
+                        "subCategoryId": 1,
+                        "subCategoryName": "string",
+                        "typeId": 1,
+                        "typeName": "string",
+                        "value": 0,
+                        "id": 1
+                    }
+                ],
+                "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetByDescription(System.String,System.Int32)">
+             <summary>
+             Retorna os registros pela dercrição
+             </summary>
+             <param name="description">Descrição do registro</param>
+             <param name="movementId">Código do tipo de movimento</param>
+             <remarks>
+             Exemplo do objeto retornado:
+            
+            {
+                "exception": null,
+                "message": null,
+                "result": "OK",
+                "resultObject": [
+                    {
+                        "categoryId": 1,
+                        "categoryName": "string",
+                        "dtRegister": "2022-01-22T15:43:29",
+                        "description": "string",
+                        "dtDue": "2022-03-20T00:00:00",
+                        "note": "string",
+                        "paymentAccountId": 0,
+                        "paymentStatus": 1,
+                        "subCategoryId": 1,
+                        "subCategoryName": "string",
+                        "typeId": 1,
+                        "typeName": "string",
+                        "value": 0,
+                        "id": 1
+                    }
+                ],
+                "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.GetBudgetSummary(System.String,System.String)">
+             <summary>
+             Retorna o relatório referente ao resumo mensal
+             </summary>
+             <param name="year">Ano do relatório</param>
+             <param name="month">Mês do relatório</param>
+             <remarks>
+             Exemplo do objeto retornado:
+             {
+                 "exception": null,
+                  "message": null,
+                  "result": "OK",
+                  "resultObject": {
+                    "totalRevenue": 0,
+                    "totalExpense": 0,
+                    "finalBalance": 0,
+                    "amountSpentByCategory": [
+                      {
+                        "idCategory": 0,
+                        "nomeCategory": "string",
+                        "amountCategory": 0
+                      },
+                      {
+                        "idCategory": 0,
+                        "nomeCategory": "string",
+                        "amountCategory": 0
+                      }
+                    ]
+                  },
+                  "status": null
+            }
+             </remarks>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.Insert(ApiFinance.Domain.Entities.DataBase.BudgetRegister)">
+            <summary>
+            Insere um registro
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiFinance.Web.Controllers.BudgetRegisterController.Delete(System.Int32)">
+            <summary>
+            Remove um registro
+            </summary>
+            <param name="id">ID do registro</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
