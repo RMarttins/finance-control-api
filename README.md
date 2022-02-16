@@ -12,4 +12,4 @@ API Rest para uma aplicação de controle de orçamento familiar.
 
 ### Modelagem do Banco de Dados
 
-![image](https://user-images.githubusercontent.com/68349820/150568515-4c995b42-b77f-4392-8c07-5c40a8cb79bf.png)
+![model_fincon](https://user-images.githubusercontent.com/68349820/154356133-1d55c10d-85a0-4dc0-b50d-dc1231835598.PNG)
